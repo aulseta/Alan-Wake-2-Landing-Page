@@ -1,0 +1,424 @@
+:root {
+    --header-bg-color: #161B1F;
+    --gray-color: #eeeeee;
+    --gray-text-color: #97AC9F;
+    --yellow-color: #fff36b;
+    --yellow-hov-button-color: #ffef3d;
+    --yellow-active-button-color: #b1a41e;
+    --black-color: #000000;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    scroll-behavior: smooth;
+    
+    font-weight: 800;
+    color: var(--gray-text-color);
+
+    /* border: 1px solid red; */
+}
+
+body {
+    background-color: var(--black-color);
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+section {
+    text-align: center;
+    background-color: var(--black-color);
+    margin: 5rem 0;
+}
+
+.button {
+    max-width: 150px;
+    width: 100%;
+    padding: .2rem .5rem;
+    margin-bottom: 1rem;
+    background-color: var(--yellow-color);
+    color: var(--black-color);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--yellow-hov-button-color);
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: var(--yellow-active-button-color);
+}
+
+input[type="email"] {
+    max-width: 500px;
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    background-color: transparent;
+    border: 5px solid var(--gray-text-color);
+    outline: none;
+}
+
+input[type="submit"] {
+    font-size: 1.25rem;
+}
+
+/* HEADER */
+
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #161b1f99;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+}
+
+#header-img {
+    height: 45px;
+    margin-left: 3.25rem;
+}
+
+
+
+#nav-bar > ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40vw;
+}
+
+#nav-link {
+    text-decoration: none;
+    font-size: 1.9rem;
+    letter-spacing: 2px;
+}
+
+#nav-link:hover {
+    color: var(--yellow-color);
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* HERO */
+
+#hero {
+    padding: 0;
+    margin: 0;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+/* MAIN */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#main > .divider {
+    margin: 0 auto;
+}
+
+
+
+#main h2 {
+    font-size: 4.5rem;
+    letter-spacing: 5px;
+}
+
+
+
+/* PLATFORMS SECTION */
+
+#Platforms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#Platforms p {
+    font-size: 2.2rem;
+}
+
+/* CHARACTERS SECTION */
+
+#Characters {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.character-box {
+    display: flex;
+    gap: 25px;
+}
+
+.character-box:first-of-type {
+    margin-bottom: 20px;
+}
+
+.character-box p {
+    text-align: justify;
+    font-size: 1.2rem;
+    font-family: sans-serif
+}
+
+.character-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    width: 50%;
+}
+
+.character-img {
+    display: flex;
+    width: 50%;
+}
+
+.character-img > img {
+    width: 100%;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+video {
+    display: block;
+    width: 100%;
+}
+
+/* PRICING SECTION */
+
+#Pricing {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 80%;
+    border: 1px solid var(--gray-text-color);
+}
+
+.card-box > button {
+    align-self: center;
+}
+
+.card-image > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 10/11;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+    padding: .5rem 1rem;
+}
+
+.card-info h3 {
+    font-size: 2rem;
+}
+
+.divider {
+    height: 3px;
+    width: 100%;
+    background-color: #97AC9F;
+}
+
+.card-info span {
+    font-size: 1.5rem;
+}
+
+/* NEWSLETTER */
+
+#Newsletter, #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#form {
+    margin-top: 1.25rem;
+    gap: 18px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1630px) {
+
+    .character-box {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .character-info, .character-img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    
+    #header {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        height: 130px;
+    }
+
+        .logo, #nav-bar, #nav-bar ul {
+        width: 100%;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    #header {
+        height: 100px;
+        justify-content: space-around;
+    }
+
+    #header-img {
+        margin-left: 0;
+    }
+
+    #nav-bar ul {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #nav-link {
+        font-size: 1.2rem;
+    }
+
+    /* HERO */
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    /* MAIN */
+
+    #main h2 {
+        font-size: 3rem;
+        line-height: 43px;
+        text-align: center;
+    }
+
+    #Platforms p {
+        font-size: 1.5rem;
+    }
+
+    /* CHARACTERS */
+
+    #Characters {
+        margin-bottom: 2rem;
+    }
+
+    .character-box {
+        flex-direction: column;
+    }
+
+    .character-info, .character-img {
+        width: 100%;
+    }
+
+    .character-info {
+        padding: 0;
+        gap: 10px;
+    }
+
+    .character-box p {
+        font-size: 0.9rem;
+    }
+
+    /* PRICING */
+
+    #Pricing {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-top: 2rem;
+        margin-bottom: 2.45rem;
+    }    
+
+    .card-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-info span {
+        font-size: 1.2rem;
+    }
+
+    .card-box .button {
+        width: 80%;
+    }
+
+    /* NEWSLETTER */
+
+    #Newsletter {
+        margin-top: 0;
+    }
+
+    #Newsletter h2 {
+        font-size: 2rem;
+    }
+
+}
