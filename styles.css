@@ -28,9 +28,18 @@ body {
     font-family: 'Bebas Neue', sans-serif;
 }
 
+h2 {
+    font-size: 4.5rem;
+    letter-spacing: 5px;
+}
+
+p {
+    font-size: 1.35rem;
+    font-family: sans-serif;
+}
+
 section {
     text-align: center;
-    background-color: var(--black-color);
     margin: 4rem 0;
 }
 
@@ -64,7 +73,7 @@ input[type="email"] {
     outline: none;
 }
 
-input[type="submit"] {
+#submit {
     font-size: 1.25rem;
 }
 
@@ -93,8 +102,6 @@ input[type="submit"] {
     margin-left: 3.25rem;
 }
 
-
-
 #nav-bar > ul {
     display: flex;
     justify-content: space-evenly;
@@ -102,13 +109,13 @@ input[type="submit"] {
     width: 40vw;
 }
 
-#nav-link {
+.nav-link {
     text-decoration: none;
     font-size: 1.9rem;
     letter-spacing: 2px;
 }
 
-#nav-link:hover {
+.nav-link:hover {
     color: var(--yellow-color);
     cursor: pointer;
 }
@@ -148,18 +155,6 @@ li {
     width: 80%;
 }
 
-#main > .divider {
-    margin: 0 auto;
-}
-
-
-
-#main h2 {
-    font-size: 4.5rem;
-    letter-spacing: 5px;
-}
-
-
 
 /* PLATFORMS SECTION */
 
@@ -171,16 +166,11 @@ li {
     gap: 15px;
 }
 
-#Platforms p {
-    font-size: 2.2rem;
-}
-
 /* CHARACTERS SECTION */
 
 #Characters {
     display: flex;
     flex-direction: column;
-    
 }
 
 .character-box {
@@ -192,12 +182,6 @@ li {
     margin-bottom: 20px;
 }
 
-.character-box p {
-    text-align: justify;
-    font-size: 1.2rem;
-    font-family: sans-serif
-}
-
 .character-info {
     display: flex;
     flex-direction: column;
@@ -205,6 +189,15 @@ li {
     text-align: justify;
     gap: 25px;
     width: 50%;
+}
+
+.character-info > p {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.character-info > h2 {
+    text-align: left;
 }
 
 .character-img {
@@ -236,8 +229,8 @@ iframe {
 .card-box {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    width: 80%;
+    max-width: 500px;
+    width: 100%;
     border: 1px solid var(--gray-text-color);
 }
 
@@ -291,7 +284,11 @@ iframe {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 1630px) {
+@media screen and (max-width: 1280px) {
+
+    h2 {
+        font-size: 3.5rem;
+    }
 
     .character-box {
         text-align: center;
@@ -301,9 +298,14 @@ iframe {
     .character-info, .character-img {
         width: 100%;
     }
+
+    .character-info > h2 {
+        text-align: center;
+    }
+
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 1024px) {
 
     #header {
         position: relative;
@@ -318,17 +320,30 @@ iframe {
         width: 100%;
     }
 
+    #nav-bar > ul {
+        justify-content: space-around;
+    }
+
     .logo {
         justify-content: center;
     }
 
     #header-img {
-        margin-left: 0;
+        margin: 0 2rem 0 3rem;
     }
 
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 480px) {
+
+    h2 {
+        font-size: 2.5rem;
+        line-height: 43px;
+    }
+
+    p {
+        font-size: .9rem;
+    }
 
     iframe {
         height: auto;
@@ -338,12 +353,16 @@ iframe {
         height: 100px;
     }
 
+    #header-img {
+        height: 35px;
+    }
+
     #nav-bar ul {
         align-items: center;
         justify-content: space-around;
     }
 
-    #nav-link {
+    .nav-link {
         font-size: 1.2rem;
     }
 
@@ -357,17 +376,6 @@ iframe {
         display: block;
     }
 
-    /* MAIN */
-
-    #main h2 {
-        font-size: 3rem;
-        line-height: 43px;
-        text-align: center;
-    }
-
-    #Platforms p {
-        font-size: 1.5rem;
-    }
 
     /* CHARACTERS */
 
