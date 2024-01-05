@@ -31,7 +31,7 @@ body {
 section {
     text-align: center;
     background-color: var(--black-color);
-    margin: 5rem 0;
+    margin: 4rem 0;
 }
 
 .button {
@@ -202,6 +202,7 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
     gap: 25px;
     width: 50%;
 }
@@ -219,8 +220,8 @@ li {
     flex-direction: row-reverse;
 }
 
-video {
-    display: block;
+iframe {
+    height: 600px;
     width: 100%;
 }
 
@@ -303,17 +304,17 @@ video {
 }
 
 @media screen and (max-width: 1099px) {
-    
+
     #header {
         position: relative;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
         height: 130px;
     }
 
-        .logo, #nav-bar, #nav-bar ul {
+    .logo, #nav-bar, #nav-bar ul {
         width: 100%;
     }
 
@@ -321,17 +322,20 @@ video {
         justify-content: center;
     }
 
+    #header-img {
+        margin-left: 0;
+    }
+
 }
 
 @media screen and (max-width: 475px) {
 
-    #header {
-        height: 100px;
-        justify-content: space-around;
+    iframe {
+        height: auto;
     }
 
-    #header-img {
-        margin-left: 0;
+    #header {
+        height: 100px;
     }
 
     #nav-bar ul {
