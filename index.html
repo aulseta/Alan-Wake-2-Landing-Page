@@ -18,9 +18,9 @@
         </div>
         <nav id="nav-bar">
             <ul>
-                <li><a id="nav-link" href="#Platforms">PLATFORMS</a></li>
-                <li><a id="nav-link" href="#Characters">CHARACTERS</a></li>
-                <li><a id="nav-link" href="#Pricing">PRICING</a></li>
+                <li><a class="nav-link" href="#Platforms">PLATFORMS</a></li>
+                <li><a class="nav-link" href="#Characters">CHARACTERS</a></li>
+                <li><a class="nav-link" href="#Pricing">PRICING</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +36,7 @@
             <p>Alan Wake 2 is out now on PC, PlayStation 5 and Xbox Series X|S.</p>
         </section>
         
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/uxs_HYw_mLk?si=7htnNZy1zxgN9Icf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/uxs_HYw_mLk?si=7htnNZy1zxgN9Icf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         <section id="Characters">
             <div class="character-box">
@@ -88,7 +88,7 @@
                     <img src="./assets/img/deluxe-edition.jpg" alt="Alan Wake 2 Deluxe Edition">
                 </div>
                 <div class="card-info">
-                    <h3>Alan Wake 2 - Standard Edition</h3>
+                    <h3>Alan Wake 2 - Deluxe Edition</h3>
                     <div class="divider"></div>
                     <span>$69.99</span>
                 </div>
@@ -99,8 +99,8 @@
         <section id="Newsletter">
             <h2>Subscribe to our newsletter</h2>
             <form id="form" action="/" method="post">
-                <input id="email" type="email" placeholder="Enter your email address.">
-                <input class="button" type="submit" value="SUBSCRIBE">
+                <input id="email" type="email" name="email" placeholder="Enter your email address.">
+                <input id="submit" class="button" type="submit" value="SUBSCRIBE">
             </form>
         </section>
     </main>
