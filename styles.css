@@ -1,5 +1,5 @@
 :root {
-    --header-bg-color: #161B1F;
+    --header-bg-color: #161b1fcf;
     --gray-color: #eeeeee;
     --gray-text-color: #97AC9F;
     --yellow-color: #fff36b;
@@ -88,7 +88,7 @@ input[type="email"] {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #161b1f99;
+    background-color: var(--header-bg-color);
 }
 
 .logo {
@@ -308,7 +308,6 @@ li {
 @media screen and (max-width: 1024px) {
 
     #header {
-        position: relative;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -351,8 +350,9 @@ li {
 
     #video {
         height: 300px;
-        border: 3px solid var(--gray-text-color);
     }
+
+    /* HEADER */
 
     #header {
         height: 100px;
@@ -381,11 +381,16 @@ li {
         display: block;
     }
 
+    /* PLATFORMS */
+
+    #Platforms {
+        margin-bottom: 1rem;
+    }
 
     /* CHARACTERS */
 
     #Characters {
-        margin-bottom: 2rem;
+        margin-top: 1rem;
     }
 
     .character-box {
